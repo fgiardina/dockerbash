@@ -36,7 +36,7 @@ sudo apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-sudo pecl channel-update https://pecl.php.net/channel.xml \
+pecl channel-update https://pecl.php.net/channel.xml \
     && pecl install swoole \
     && pecl clear-cache \
     && rm -rf /tmp/* /var/tmp/*
