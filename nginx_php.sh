@@ -1,5 +1,7 @@
 #!bin/bash
 
+ENV DEBIAN_FRONTEND noninteractive
+
 ENV TZ=UTC
 
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
