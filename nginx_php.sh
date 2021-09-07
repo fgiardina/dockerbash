@@ -41,4 +41,4 @@ pecl channel-update https://pecl.php.net/channel.xml \
     && pecl clear-cache \
     && rm -rf /tmp/* /var/tmp/*
 
-RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.0
+setcap "cap_net_bind_service=+ep" /usr/bin/php8.0
