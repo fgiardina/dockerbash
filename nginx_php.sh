@@ -1,10 +1,6 @@
 #!bin/bash
 
-ENV DEBIAN_FRONTEND noninteractive
-
-ENV TZ=UTC
-
-ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo UTC > /etc/timezone
 
 sudo apt-get update \
     && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor sqlite3 libcap2-bin libpng-dev python3 \
