@@ -25,11 +25,10 @@ sudo apt-get update \
     && apt-get update \
     && apt-get install -y yarn \
     && apt-get install -y mysql-client \
+    && apt-get install nginx -y 
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-sudo apt-get install nginx -y 
 
 pecl channel-update https://pecl.php.net/channel.xml \
     && pecl install swoole \
