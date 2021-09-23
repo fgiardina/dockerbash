@@ -11,3 +11,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 sudo apt-get install zip unzip
+echo "alias dc='sudo docker-compose'" >> /home/ubuntu/.bashrc
+echo "alias dcr='sudo docker-compose run --rm'" >> /home/ubuntu/.bashrc
+source /home/ubuntu/.bashrc
