@@ -10,6 +10,8 @@ sudo apt-get update \
     && apt-key adv --homedir ~/.gnupg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E5267A6C \
     && apt-key adv --homedir ~/.gnupg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C300EE8C \
     && echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
+    && apt-get install -y ca-certificates apt-transport-https software-properties-common \
+    && add-apt-repository ppa:ondrej/php
     && apt-get update \
     && apt-get install -y php8.0-cli php8.0-dev php8.0-fpm \
        php8.0-gd \
