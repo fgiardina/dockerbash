@@ -4,7 +4,7 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo UTC > /etc/timezone
 
 sudo apt-get update \
     && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor libcap2-bin libpng-dev python3 apt-transport-https software-properties-common \
-    && add-apt-repository ppa:ondrej/php \
+    && add-apt-repository --yes ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y php8.0-cli php8.0-dev php8.0-fpm \
        php8.0-gd \
