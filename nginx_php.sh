@@ -2,6 +2,9 @@
 
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo UTC > /etc/timezone
 
+sudo systemctl stop apache2
+sudo systemctl disable apache2
+
 sudo apt-get update \
     && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor libcap2-bin libpng-dev python3 apt-transport-https software-properties-common \
     && add-apt-repository --yes ppa:ondrej/php \
