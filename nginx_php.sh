@@ -9,16 +9,16 @@ sudo apt-get update \
     && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor libcap2-bin libpng-dev python3 apt-transport-https software-properties-common \
     && add-apt-repository --yes ppa:ondrej/php \
     && apt-get update \
-    && apt-get install -y php8.0-cli php8.0-dev php8.0-fpm \
-       php8.0-gd \
-       php8.0-curl php8.0-memcached \
-       php8.0-imap php8.0-mysql php8.0-mbstring \
-       php8.0-xml php8.0-zip php8.0-bcmath php8.0-soap \
-       php8.0-intl php8.0-readline \
-       php8.0-msgpack php8.0-igbinary php8.0-ldap \
-       php8.0-redis \
+    && apt-get install -y php8.1-cli php8.1-dev php8.1-fpm \
+       php8.1-gd \
+       php8.1-curl php8.1-memcached \
+       php8.1-imap php8.1-mysql php1.0-mbstring \
+       php8.1-xml php8.1-zip php8.1-bcmath php8.1-soap \
+       php8.1-intl php8.1-readline \
+       php8.1-msgpack php8.1-igbinary php8.1-ldap \
+       php8.1-redis \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
-    && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_19.x | bash - \
     && apt-get install -y nodejs \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
